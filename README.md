@@ -4,10 +4,12 @@
 
 
 # Deepframe: A Profile-driven Compiler for Spatial Hardware Accelerators
-Welcome! This repository represents the Norwegian University of Science and Technology (NTNU) version of Deepframe and Needle. These programs were originally created by groups work Simon Fraser University (SFU).
 
-Links to the original research papers can be found here:
+Welcome! 
 
+This repository represents the Norwegian University of Science and Technology (NTNU) versions of Deepframe and Needle. These programs were originally created by the School of Computing Science at Simon Fraser University (SFU).
+
+Links to the original research papers from SFU can be found here:   
 Needle: [https://ieeexplore.ieee.org/document/7920856](https://ieeexplore.ieee.org/document/7920856)  
 Deepframe: [https://www2.cs.sfu.ca/~ashriram/papers/2019_PACT_DEEPFRAME.pdf](https://www2.cs.sfu.ca/~ashriram/papers/2019_PACT_DEEPFRAME.pdf)
 
