@@ -30,7 +30,7 @@ A script for installing LLVM `get_llvm.sh` is included in the `needle` sub-direc
 **Caution!** Before using this script make sure to edit the necessary variables inside it so that LLVM is being downloaded for the operating system that you are using, and that the links for using `wget` are correct. Links and versions for LLVM downloads can be checked at [http://releases.llvm.org/](http://releases.llvm.org/).  
 
  1. Download LLVM `cd needle && ./get_llvm.sh && cd ..`
- 2. Run make `mkdir needle-build && cd needle-build && cmake ../needle -DLLVM_DIR=../path_sequence/llvm-3.8/share/llvm/cmake && make -j 4`
+ 2. Run make `mkdir needle-build && cd needle-build && cmake ../needle -DLLVM_DIR=../needle/llvm-3.8/share/llvm/cmake && make -j 4`
 
 ## Running the frame maker
 
