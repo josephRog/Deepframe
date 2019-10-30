@@ -26,8 +26,11 @@ Deepframe: [https://www2.cs.sfu.ca/~ashriram/papers/2019_PACT_DEEPFRAME.pdf](htt
 ### Build Needle
 Deepframe can be thought of as an extension of Needle. As a result Needle needs to be built first in order for Deepframe to function. Currently Needle only has support for LLVM version 3.8.1. Other versions of LLVM may work in some cases, but they are not supported.
 
-A script for installing LLVM `get_llvm.sh` is included in the `needle` sub-directory.   
-**Caution!** Before using this script make sure to edit the necessary variables inside it so that LLVM is being downloaded for the operating system that you are using, and that the links for using `wget` are correct. Links and versions for LLVM downloads can be checked at [http://releases.llvm.org/](http://releases.llvm.org/).  
+A script for installing LLVM `get_llvm.sh` is included in the `needle` sub-directory. If this script fails then check that the variables it contains for linking to the LLVM download page are correct. Links and versions for LLVM downloads can be checked at [http://releases.llvm.org/](http://releases.llvm.org/).  
+
+**Beware:** The LLVM download script is set to get the Ubuntu 14.04 version of LLVM. **DO NOT CHANGE THIS.** If you try to compile with 16.04 or another version it will fail. The 14.04 Ubuntu version of LLVM of works fine even if you are not running that version of Ubuntu.   
+
+One error that sometimes occurs is `/usr/bin/ld: cannot find -lz`. This is a compiler linking error that can be fixed by running `sudo apt-get install libz-dev`.  
 
  1. Download LLVM `cd needle && ./get_llvm.sh && cd ..`
  2. Run make `mkdir needle-build && cd needle-build && cmake ../needle -DLLVM_DIR=../needle/llvm-3.8/share/llvm/cmake && make -j 4`
