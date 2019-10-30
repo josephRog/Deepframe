@@ -4,11 +4,16 @@
 
 
 # Deepframe: A Profile-driven Compiler for Spatial Hardware Accelerators
+Welcome! This repository represents the Norwegian University of Science and Technology (NTNU) version of Deepframe and Needle. These programs were originally created by groups work Simon Fraser University (SFU).
+
+Links to the original research papers can be found here:
+
+Needle: [https://ieeexplore.ieee.org/document/7920856](https://ieeexplore.ieee.org/document/7920856)  
+Deepframe: [https://www2.cs.sfu.ca/~ashriram/papers/2019_PACT_DEEPFRAME.pdf](https://www2.cs.sfu.ca/~ashriram/papers/2019_PACT_DEEPFRAME.pdf)
 
 
 
-
-## Building the frame maker
+## Building Needle and Deepframe
 
 ### Install dependencies
 
@@ -16,11 +21,14 @@
  2. `CMake 2.8.8`
  3. `gcc-5` or greater
 
-### Build frame maker
+### Build Needle
+Deepframe can be thought of as an extension of Needle. As a result Needle needs to be built first in order for Deepframe to function. Currently Needle only has support for LLVM version 3.8.1. Other versions of LLVM may work in some cases, but they are not supported.
 
- 1. Clone or download this repository: `$ git clone`[`https://csil-git1.cs.surrey.sfu.ca/amoeba/path_sequence.git`](https://csil-git1.cs.surrey.sfu.ca/amoeba/path_sequence.git)
- 2. Download LLVM `$ cd path_sequence && ./get_llvm.sh && cd ..`
- 3. Run make `$ mkdir needle-build && cd needle-build && cmake ../needle -DLLVM_DIR=../path_sequence/llvm-3.8/share/llvm/cmake && make -j 4`
+A script for installing LLVM `get_llvm.sh` is included in the `needle` sub-directory.   
+**Caution!** Before using this script make sure to edit the necessary variables inside it so that LLVM is being downloaded for the operating system that you are using, and that the links for using `wget` are correct. Links and versions for LLVM downloads can be checked at [http://releases.llvm.org/](http://releases.llvm.org/).  
+
+ 1. Download LLVM `cd needle && ./get_llvm.sh && cd ..`
+ 2. Run make `mkdir needle-build && cd needle-build && cmake ../needle -DLLVM_DIR=../path_sequence/llvm-3.8/share/llvm/cmake && make -j 4`
 
 ## Running the frame maker
 
